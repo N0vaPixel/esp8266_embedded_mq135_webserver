@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<a>Firmware pour NodeMCU v1.0 - Utilise un capteur MQ-135 pour mesurer la concentration de CO2 dans l'atmosph&egrave;re. </a>
+		<br \><br \>
+		<div id="sensorData">
+			<b><a>CO2 (ppm) : </a><a id="co2">Waiting...</a></b>
+		</div>
+		<br \>
+		<a>esp8266_embedded_mq135_webserver - v0.1.0 - A.Hernandez</a>
+		<br \>
+		<br \>
+		<a>PTUT MP1 IUT Evreux 2016/2017</a>
+		
+		<script>
+			var refresh_co2 = setInterval(
+				function ()
+				{
+				$('#co2').load('getSensorData');
+				}, 5000);
+		</script>
+	</body>
+</html>
